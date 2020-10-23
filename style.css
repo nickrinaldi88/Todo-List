@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+}
+
+#add-btn {
+    width: 4.5em;
+    height: 4.5em;
+}
+
+
+/* #input-box {
+    width: 4.5em;
+    height: 4.5em;
+    /* why does this get smaller? */
