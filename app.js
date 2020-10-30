@@ -1,31 +1,39 @@
-const list_node = document.createElement("li");
-const task = document.createTextNode("This is a task")
-list_node.appendChild(task)
+const ul_node = document.createElement("ul");
+document.body.appendChild(ul_node);
 
 function createListElem() {
-    document.body.appendChild(list_node);
-    list_node.set
+    const del_btn = document.createElement('button');
+    del_btn.setAttribute('id', 'del-btn')
+    del_btn.setAttribute('onclick', delete_task())
+    // document.body.appendChild(list_node);
+    // when button clicked element below placed onto page
+    // grab input content
+    const box_value = document.getElementById('input-box').value;
+    // create tex node of that value
+    const task = document.createTextNode(box_value);
+    // create ul node
+    const li_node = document.createElement('li');
+    // add  text to the ul
+    li_node.appendChild(task)
+    li_node.appendChild(del_btn)
+    // add ul to list
+    ul_node.appendChild(li_node)
+    // add list to body
+    // document.body.appendChild(list_node);
+    // console.log(box_value);
+    
+}
+
+function delete_task(){
+    const obj = document.querySelector('li');
+    obj.remove(); 1
 }
 
 createListElem();
 
-let greeting = "say Hi";
-if (true) {
-    let greeting = "say Hello instead";
-    console.log(greeting); // "say Hello instead"
-}
-
-console.log(greeting);
 
 
-// "say Hello instead"
-
-
-// 1. When our button object is clicked(), I need to generate a ul element
-// 1(cont). containing the text inside our input box
-
-// Establish variable to hold input object
-// Learn about the differences in variable declarations
-// - https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/#:~:text=var%20declarations%20are%20globally%20scoped%20or%20function%20scoped%20while%20let,be%20updated%20nor%20re%2Ddeclared.
-
-// Learn how to dynmically place elements when button pressed
+// Todo:
+// -Generate button in each ul element to delete that element
+// -Center our list below the todo list
+// -resize 
