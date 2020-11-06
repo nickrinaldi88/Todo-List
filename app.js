@@ -54,17 +54,36 @@ function createListElem() {
 
 function checkTasks(){
     const taskStatus = document.getElementById('task-completion').value;
-    console.log(taskStatus);
+    const comp = document.getElementsByClassName('completed');
+    const uncomp = document.getElementsByClassName('uncompleted');
+
+    console.log(comp.length);
+
+    if (taskStatus === 'Completed'){
+        for (i = 0; i < uncomp.length;  i++){
+            uncomp[i].style.visibility = 'hidden';
+        }
+    }
+
+    else if (taskStatus === 'Uncompleted'){
+        let uncomp_len = uncomp.length;
+        for (i = 0; i < comp.length;  i++){
+            comp[i].style.visibility = 'hidden';
+            uncomp[uncomp_len].style.visibility = 'visible';
+        }
+    }
+        // uncomp[i].style.visibility = 'hidden';
+        // all.style.visibility = 'hidden';
+        
+    
 }
 
-checkTasks();
+
 
 // https://stackoverflow.com/questions/32678493/how-to-use-the-if-statement-javascript-with-the-select-tag-in-html
 
 
-// -establish variables for all our select options
-// -if option is selected, display class with this name
-
+// if other option is selected (completed, uncompleted) make sure display is visible of opposing option
 
 
 
