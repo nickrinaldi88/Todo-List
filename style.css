@@ -1,0 +1,72 @@
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    /* margin-top: 100px; */
+    /* flex: 1 1 auto; */
+    /* align-items: flex-start; */
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    }
+
+#list-div{
+    background: red;
+    margin-top: 10px;
+}
+
+ul{
+    margin: auto;
+    background: green;
+    width: 50%;
+    /* margin: auto; */
+    /* width: 20%; */
+    /* background: red;
+    width: 50%; */
+    /* display: flex;
+    justify-content: center; */
+    /* position: absolute; */
+    /* text-align: center; */
+    /* display: inline-block; */
+}
+
+/* inside div-input-container */
+
+#com-btn {
+    height: 2.5em;
+    width: 2.5em;
+    margin: 0px 0px 0px 25px;
+}
+
+#add-btn {
+    height: 4.5em;
+    width: 4.5em;
+    margin: 0px 0px 0px 25px;
+}
+
+#input-box {
+    width: 20em;
+    font-size: 2rem;
+}
+
+#task-completion {
+    margin-left: 12.5px;
+    font-size: 1rem;
+}
+
+
+
+/* inside the UL */
+
+#li-task{
+    /* padding: 10px; */
+    /* display: inline; */
+}
+
+#del-btn{
+    height: 2.5em;
+    width: 2.5em;
+    margin: 0px 0px 0px 25px;
+}
