@@ -16,12 +16,12 @@ function createListElem() {
     const complete_btn = document.createElement('button');
 
     delete_btn.setAttribute('id', 'del-btn');
-    delete_btn.onclick = function(){
+    delete_btn.onclick = function() {
         this.parentElement.remove()
     };
 
     complete_btn.setAttribute('id', 'com-btn');
-   
+
     // li_item.addEventListener('click', 'remove')
     // delete_btn.innerText = 'delete';
 
@@ -42,42 +42,70 @@ function createListElem() {
     // appending li element containing text and btn to ul element
     ul_node.appendChild(li_node);
     // appending ul element to div
-    list_div.appendChild(ul_node); 
+    list_div.appendChild(ul_node);
     document.body.appendChild(list_div);
 
-    complete_btn.onclick = function(){
+    complete_btn.onclick = function() {
         this.parentElement.style.textDecoration = 'line-through'
         this.parentElement.setAttribute('class', 'completed');
     }
 
 }
 
-function checkTasks(){
+function checkTasks() {
     const taskStatus = document.getElementById('task-completion').value;
     const comp = document.getElementsByClassName('completed');
     const uncomp = document.getElementsByClassName('uncompleted');
 
-    console.log(comp.length);
-
-    if (taskStatus === 'Completed'){
-        for (i = 0; i < uncomp.length;  i++){
+    if (taskStatus === 'Completed') {
+        for (i = 0; i < uncomp.length; i++) {
             uncomp[i].style.visibility = 'hidden';
         }
-    }
 
-    else if (taskStatus === 'Uncompleted'){
-        let uncomp_len = uncomp.length;
-        for (i = 0; i < comp.length;  i++){
-            comp[i].style.visibility = 'hidden';
-            uncomp[uncomp_len].style.visibility = 'visible';
+        for (m = 0; m < comp.length; m++) {
+            comp[m].style.visibility = 'visible'
+        }
+    } else if (taskStatus === 'Uncompleted') {
+        for (n = 0; n < comp.length; n++) {
+            // console.log(comp);
+            comp[n].style.visibility = 'hidden';
+        }
+
+        for (x = 0; x < uncomp.length; x++) {
+            // console.log(comp);
+            uncomp[x].style.visibility = 'visible';
+        }
+
+    } else {
+
+        for (y = 0; y < comp.length; y++) {
+            // console.log(comp);
+            comp[y].style.visibility = 'visible';
+        }
+
+        for (z = 0; z < uncomp.length; z++) {
+            // console.log(comp);
+            uncomp[z].style.visibility = 'visible';
         }
     }
-        // uncomp[i].style.visibility = 'hidden';
-        // all.style.visibility = 'hidden';
-        
-    
-}
 
+};
+
+
+// uncomp[i].style.visibility = 'hidden';
+// all.style.visibility = 'hidden';
+
+
+
+
+
+// else(taskStatus = 'All') {
+//         for (i = 0; i < comp.length; i++) {
+//             comp[i].style.visibility = 'visible';
+//         }
+//         for (n = 0; n < comp.length; n++) {
+//             uncomp[n].style.visibility = 'visible';
+//         }
 
 
 // https://stackoverflow.com/questions/32678493/how-to-use-the-if-statement-javascript-with-the-select-tag-in-html
