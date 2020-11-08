@@ -66,6 +66,7 @@ ul {
 #li-task {
     list-style-type: none;
     font-family: 'Raleway', sans-serif;
+    background: aquamarine;
 }
 
 #del-btn {
@@ -73,3 +74,21 @@ ul {
     width: 2.5em;
     margin: 0px 0px 0px 25px;
 }
+
+
+/* add background to li element */
+
+
+/* make submit button have a plus icon */
+
+
+/* make dropdown button have a down arrow icon */
+
+
+/* have completed button a green check icon */
+
+
+/* have deleted button a garage bin icon */
+
+
+/* permanently stick the complete/delete buttons to the far right of each li element, no matter the size of element */
