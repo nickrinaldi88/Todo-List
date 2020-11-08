@@ -1,3 +1,8 @@
+body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, #49D49D 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
 .input-container {
     display: flex;
     justify-content: center;
@@ -9,16 +14,15 @@
 h1 {
     text-align: center;
     font-size: 3rem;
+    font-family: 'Raleway', sans-serif;
 }
 
 #list-div {
-    background: red;
     margin-top: 10px;
 }
 
 ul {
     margin: auto;
-    background: green;
     width: 50%;
     /* margin: auto; */
     /* width: 20%; */
@@ -60,8 +64,8 @@ ul {
 /* inside the UL */
 
 #li-task {
-    /* padding: 10px; */
-    /* display: inline; */
+    list-style-type: none;
+    font-family: 'Raleway', sans-serif;
 }
 
 #del-btn {

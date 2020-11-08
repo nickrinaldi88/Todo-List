@@ -92,29 +92,6 @@ function checkTasks() {
 };
 
 
-// uncomp[i].style.visibility = 'hidden';
-// all.style.visibility = 'hidden';
-
-
-
-
-
-// else(taskStatus = 'All') {
-//         for (i = 0; i < comp.length; i++) {
-//             comp[i].style.visibility = 'visible';
-//         }
-//         for (n = 0; n < comp.length; n++) {
-//             uncomp[n].style.visibility = 'visible';
-//         }
-
-
-// https://stackoverflow.com/questions/32678493/how-to-use-the-if-statement-javascript-with-the-select-tag-in-html
-
-
-// if other option is selected (completed, uncompleted) make sure display is visible of opposing option
-
-
-
 
 
 
@@ -124,11 +101,8 @@ function checkTasks() {
 
 // https://www.codexworld.com/how-to/trigger-button-click-on-enter-key-press-javascript/
 
-// - Add new item on enter
-// - center our ul better
-// - Figure out why text in li is not displaying horizontally
-// - configure our drop down to sort list by completed, uncompleted, and all
-// - display another button for completed in the li element, and add a strikethrough to the li text
-// - style and color
+
 // - remove bullet point from start of element
 // - add fade-out effect for li element when deleted
+// - enter key press event
+// - style and color
