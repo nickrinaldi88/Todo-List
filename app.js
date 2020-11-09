@@ -21,9 +21,10 @@ function createListElem() {
     };
 
     complete_btn.setAttribute('id', 'com-btn');
+    complete_btn.innerHTML = '<i class="fas fa-check-square" "aria-hidden="true"></i>';
 
-    // li_item.addEventListener('click', 'remove')
-    // delete_btn.innerText = 'delete';
+    delete_btn.innerHTML = '<i class="fas fa-trash-alt" "aria-hidden="true"></i>';
+
 
     const box_value = document.getElementById('input-box').value;
 
@@ -34,14 +35,14 @@ function createListElem() {
     li_node.setAttribute('id', 'li-task');
     li_node.setAttribute('class', 'uncompleted');
 
-    // appending text to li element
+
     li_node.appendChild(task);
-    // appending button to li element *
+
     li_node.appendChild(complete_btn);
     li_node.appendChild(delete_btn);
-    // appending li element containing text and btn to ul element
+
     ul_node.appendChild(li_node);
-    // appending ul element to div
+
     list_div.appendChild(ul_node);
     document.body.appendChild(list_div);
 
@@ -67,24 +68,20 @@ function checkTasks() {
         }
     } else if (taskStatus === 'Uncompleted') {
         for (n = 0; n < comp.length; n++) {
-            // console.log(comp);
             comp[n].style.visibility = 'hidden';
         }
 
         for (x = 0; x < uncomp.length; x++) {
-            // console.log(comp);
             uncomp[x].style.visibility = 'visible';
         }
 
     } else {
 
         for (y = 0; y < comp.length; y++) {
-            // console.log(comp);
             comp[y].style.visibility = 'visible';
         }
 
         for (z = 0; z < uncomp.length; z++) {
-            // console.log(comp);
             uncomp[z].style.visibility = 'visible';
         }
     }

@@ -1,14 +1,11 @@
 body {
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, #49D49D 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
 }
 
 .input-container {
     display: flex;
     justify-content: center;
-    /* margin-top: 100px; */
-    /* flex: 1 1 auto; */
-    /* align-items: flex-start; */
+
 }
 
 h1 {
@@ -24,25 +21,12 @@ h1 {
 ul {
     margin: auto;
     width: 50%;
-    /* margin: auto; */
-    /* width: 20%; */
-    /* background: red;
-    width: 50%; */
-    /* display: flex;
-    justify-content: center; */
-    /* position: absolute; */
-    /* text-align: center; */
-    /* display: inline-block; */
+
 }
 
 
 /* inside div-input-container */
 
-#com-btn {
-    height: 2.5em;
-    width: 2.5em;
-    margin: 0px 0px 0px 25px;
-}
 
 #add-btn {
     height: 4.5em;
@@ -66,13 +50,23 @@ ul {
 #li-task {
     list-style-type: none;
     font-family: 'Raleway', sans-serif;
-    background: aquamarine;
+    background: #3A1C71;
+    color: white;
+}
+
+#com-btn {
+    height: 2.5em;
+    width: 2.5em;
+    /* margin-left: 325px; */
+    
 }
 
 #del-btn {
+    position: relative;
     height: 2.5em;
     width: 2.5em;
-    margin: 0px 0px 0px 25px;
+    /* position: absolute; */
+    margin-left: 358px;
 }
 
 
