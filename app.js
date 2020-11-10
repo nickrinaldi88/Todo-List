@@ -1,29 +1,26 @@
 const ul_node = document.createElement("ul");
 const list_div = document.createElement('div');
 list_div.setAttribute('id', 'list-div');
-// list_div.appendChild(ul_node);
 
-
-// const add_btn = document.getElementById('add-btn');
-// add_btn.addEventListener("keypress", function(event){
-//     if (event.keyCode === 13){
-//         document.getElementById('add-btn').click();
-//     }
-// });
 
 function createListElem() {
-    const delete_btn = document.createElement('button');
     const complete_btn = document.createElement('button');
+    const delete_btn = document.createElement('button');
+    const buttons_span = document.createElement('span');
+
+    buttons_span.appendChild(complete_btn);
+    buttons_span.appendChild(delete_btn);
+    buttons_span.setAttribute('class', 'btn-span');
 
     delete_btn.setAttribute('id', 'del-btn');
     delete_btn.onclick = function() {
-        this.parentElement.remove()
+        this.parentElement.parentElement.remove()
     };
 
     complete_btn.setAttribute('id', 'com-btn');
-    complete_btn.innerHTML = '<i class="fas fa-check-square" "aria-hidden="true"></i>';
+    complete_btn.innerHTML = '<i class="fas fa-check-square" aria-hidden="true"></i>';
 
-    delete_btn.innerHTML = '<i class="fas fa-trash-alt" "aria-hidden="true"></i>';
+    delete_btn.innerHTML = '<i class="fas fa-trash-alt" aria-hidden="true"></i>';
 
 
     const box_value = document.getElementById('input-box').value;
@@ -34,24 +31,44 @@ function createListElem() {
 
     li_node.setAttribute('id', 'li-task');
     li_node.setAttribute('class', 'uncompleted');
-
-
     li_node.appendChild(task);
 
-    li_node.appendChild(complete_btn);
-    li_node.appendChild(delete_btn);
+    // document.body.appendChild(buttons_span);
+
+    li_node.appendChild(buttons_span);
+
+    // li_node.appendChild(complete_btn);
+    // li_node.appendChild(delete_btn);
 
     ul_node.appendChild(li_node);
 
     list_div.appendChild(ul_node);
+
+    // list_div.appendChild(complete_btn);
+    // list_div.appendChild(delete_btn);
     document.body.appendChild(list_div);
 
     complete_btn.onclick = function() {
-        this.parentElement.style.textDecoration = 'line-through'
-        this.parentElement.setAttribute('class', 'completed');
+        this.parentElement.parentElement.style.textDecoration = 'line-through';
+        // this.parentElement.parentElement.style.opacity = 25%
+        this.parentElement.parentElement.setAttribute('class', 'completed');
     }
-
 }
+
+
+document.addEventListener('keydown', function(event){
+    if (event.key === 'Enter'){
+        createListElem();
+    }});
+
+document.addEventListener('keydown', function(event){
+    if (event.key === 'Backspace'){
+        if (document.getElementById('del-btn')){
+            document.getElementById('del-btn').parentElement.parentElement.remove()
+        } else{}
+    }
+});
+
 
 function checkTasks() {
     const taskStatus = document.getElementById('task-completion').value;
@@ -93,13 +110,7 @@ function checkTasks() {
 
 
 
-
-
-
-// https://www.codexworld.com/how-to/trigger-button-click-on-enter-key-press-javascript/
-
-
-// - remove bullet point from start of element
 // - add fade-out effect for li element when deleted
-// - enter key press event
+// https://stackoverflow.com/questions/33424138/how-to-remove-a-div-with-fade-out-effect-in-javascript
+
 // - style and color

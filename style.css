@@ -47,42 +47,47 @@ ul {
 
 /* inside the UL */
 
+.btn-span{
+    /* overflow: auto; */
+    float: right;
+    height: 100%;
+
+}
+
 #li-task {
     list-style-type: none;
+    display: block;
     font-family: 'Raleway', sans-serif;
-    background: #3A1C71;
-    color: white;
+    color: #3A1C71;
+    background: white;
+    height: 2.5em;
+    margin-top: 5px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+#del-btn {
+    /* float: right; */
+    height: 100%;
+    width: 2.5em;
+
 }
 
 #com-btn {
-    height: 2.5em;
+    background: green;
+    /* float: right; */
+    height: 100%;
     width: 2.5em;
-    /* margin-left: 325px; */
     
 }
 
-#del-btn {
-    position: relative;
-    height: 2.5em;
-    width: 2.5em;
-    /* position: absolute; */
-    margin-left: 358px;
-}
 
+/* https://stackoverflow.com/questions/5834275/why-does-font-size-impact-the-height-of-my-li-elements/5834362#5834362 */
 
-/* add background to li element */
+/* vertically center text in list element */
 
+/* increase width of list-div to match width of input-container */
 
-/* make submit button have a plus icon */
-
-
-/* make dropdown button have a down arrow icon */
-
-
-/* have completed button a green check icon */
-
-
-/* have deleted button a garage bin icon */
-
-
-/* permanently stick the complete/delete buttons to the far right of each li element, no matter the size of element */
+/* increase top and bottom margins to create space btwn divs */
