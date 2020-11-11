@@ -52,6 +52,7 @@ function createListElem() {
         this.parentElement.parentElement.style.textDecoration = 'line-through';
         // this.parentElement.parentElement.style.opacity = 25%
         this.parentElement.parentElement.setAttribute('class', 'completed');
+
     }
 }
 
@@ -61,14 +62,6 @@ document.addEventListener('keydown', function(event){
         createListElem();
     }});
 
-document.addEventListener('keydown', function(event){
-    if (event.key === 'Backspace'){
-        if (document.getElementById('del-btn')){
-            document.getElementById('del-btn').parentElement.parentElement.remove()
-        } else{}
-    }
-});
-
 
 function checkTasks() {
     const taskStatus = document.getElementById('task-completion').value;
@@ -77,29 +70,29 @@ function checkTasks() {
 
     if (taskStatus === 'Completed') {
         for (i = 0; i < uncomp.length; i++) {
-            uncomp[i].style.visibility = 'hidden';
+            uncomp[i].style.display = 'none';
         }
 
         for (m = 0; m < comp.length; m++) {
-            comp[m].style.visibility = 'visible'
+            comp[m].style.display = '';
+
         }
     } else if (taskStatus === 'Uncompleted') {
         for (n = 0; n < comp.length; n++) {
-            comp[n].style.visibility = 'hidden';
+            comp[n].style.display = 'none';
         }
 
         for (x = 0; x < uncomp.length; x++) {
-            uncomp[x].style.visibility = 'visible';
+            uncomp[x].style.display = '';
         }
 
     } else {
-
         for (y = 0; y < comp.length; y++) {
-            comp[y].style.visibility = 'visible';
+            comp[y].style.display = '';
         }
 
         for (z = 0; z < uncomp.length; z++) {
-            uncomp[z].style.visibility = 'visible';
+            uncomp[z].style.display = '';
         }
     }
 
@@ -107,10 +100,13 @@ function checkTasks() {
 
 
 
+// when item is completed, lower opacity
 
+
+// depending on our select option, collapse the list elements to take up space
 
 
 // - add fade-out effect for li element when deleted
 // https://stackoverflow.com/questions/33424138/how-to-remove-a-div-with-fade-out-effect-in-javascript
 
-// - style and color
+// - decide on final color scheme
