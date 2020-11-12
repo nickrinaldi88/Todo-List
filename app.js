@@ -108,9 +108,4 @@ function checkTasks() {
   }
 }
 
-// un check button restores opacity and undos strikethrough to completed task
-
-// - add fade-out effect for li element when deleted
-// https://stackoverflow.com/questions/33424138/how-to-remove-a-div-with-fade-out-effect-in-javascript
-
 // - decide on final color scheme
