@@ -13,8 +13,16 @@ function createListElem() {
 
   delete_btn.setAttribute("id", "del-btn");
   delete_btn.onclick = function () {
-    this.parentElement.parentElement.remove();
+    this.parentElement.parentElement.setAttribute("class", "removed");
+    setTimeout(() => {
+      this.parentElement.parentElement.remove();
+    }, 1500);
+    // this.parentElement.parentElement.remove();
   };
+
+  // if (removed) {
+  //   removed.parentElement.parentElement.remove();
+  // }
 
   complete_btn.setAttribute("id", "com-btn");
   complete_btn.innerHTML =
@@ -47,37 +55,19 @@ function createListElem() {
   // list_div.appendChild(delete_btn);
   document.body.appendChild(list_div);
 
+  var first_click = true;
+
   complete_btn.onclick = function () {
-    this.parentElement.parentElement.style.textDecoration = "line-through";
-    // this.parentElement.parentElement.style.opacity = 25%
-    this.parentElement.parentElement.setAttribute("class", "completed");
-
-    var opac = 1;
-    console.log(comp_task);
-    setTimeout(function () {
-      const comp_task = document.getElementsByClassName("completed");
-      if (opac > 0.1) {
-        console.log(opac);
-        opac -= 0.1;
-        comp_task.style.opacity = opac;
-      }
-    }, 1000);
+    if (first_click) {
+      // this.parentElement.parentElement.style.textDecoration = "line-through";
+      // this.parentElement.parentElement.style.opacity = 25%
+      this.parentElement.parentElement.setAttribute("class", "completed");
+      first_click = false;
+    } else {
+      this.parentElement.parentElement.setAttribute("class", "uncompleted");
+      first_click = true;
+    }
   };
-  // var opac = 1;
-  // console.log(comp_task)
-  //     setTimeout(function(){
-  //             const comp_task = document.getElementsByClassName('completed');
-  //             if (opac > .1){
-  //                 console.log(opac);
-  //                 opac  -= .1
-  //                 comp_task.style.opacity = opac;
-  //             }
-  //         }, 1000);
-  //     }
-
-  // setTimeout(function(){
-  //     complete_btn.parentElement.parentElement.style.opacity = '.4';
-  // }, 2000);
 }
 
 document.addEventListener("keydown", function (event) {
@@ -119,10 +109,6 @@ function checkTasks() {
 }
 
 // un check button restores opacity and undos strikethrough to completed task
-
-// when item is completed, lower opacity
-
-// depending on our select option, collapse the list elements to take up space
 
 // - add fade-out effect for li element when deleted
 // https://stackoverflow.com/questions/33424138/how-to-remove-a-div-with-fade-out-effect-in-javascript
