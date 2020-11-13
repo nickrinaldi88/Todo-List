@@ -93,4 +93,3 @@ function checkTasks() {
   }
 }
 
-// - decide on final color scheme
