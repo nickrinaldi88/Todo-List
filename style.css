@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(90deg, #F2E863 0%, #F25757 100%);
+    background: linear-gradient(90deg, #f2b463 0%, #F25757 100%);
 }
 
 .input-container {
@@ -38,8 +38,6 @@ h1 {
 ul {
     margin: auto;
     width: 35%;
-    /* justify-content: center; */
-
 
 }
 
@@ -72,13 +70,13 @@ ul {
 /* inside the UL */
 
 .btn-span{
-    /* overflow: auto; */
     float: right;
     height: 100%;
 
 }
 
 #li-task {
+
     list-style-type: none;
     display: block;
     font-family: 'Raleway', sans-serif;
@@ -89,17 +87,16 @@ ul {
     margin-top: 5px;
     position: relative;
     width: 100%;
-    /* overflow: hidden; */
     height: 45px;
     line-height: 40px;
     transition-duration: 1000ms;
+
     
 
 }
 
 
 #del-btn {
-    /* float: right; */
     background: rgb(160, 96, 96);
     height: 45px;
     width: 2.5em;
@@ -108,10 +105,8 @@ ul {
 
 #com-btn {
     background: rgb(148, 240, 148);
-    /* float: right; */
     height: 45px;
     width: 2.5em;
-    
 }
 
 /* animated elements */
@@ -121,7 +116,6 @@ ul {
 }
 
 .completed{
-    /* text-decoration: line-through; */
     opacity: .325;
     text-decoration: line-through;
 }

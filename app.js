@@ -17,12 +17,7 @@ function createListElem() {
     setTimeout(() => {
       this.parentElement.parentElement.remove();
     }, 1500);
-    // this.parentElement.parentElement.remove();
   };
-
-  // if (removed) {
-  //   removed.parentElement.parentElement.remove();
-  // }
 
   complete_btn.setAttribute("id", "com-btn");
   complete_btn.innerHTML =
@@ -39,28 +34,18 @@ function createListElem() {
   li_node.setAttribute("id", "li-task");
   li_node.setAttribute("class", "uncompleted");
   li_node.appendChild(task);
-
-  // document.body.appendChild(buttons_span);
-
   li_node.appendChild(buttons_span);
-
-  // li_node.appendChild(complete_btn);
-  // li_node.appendChild(delete_btn);
 
   ul_node.appendChild(li_node);
 
   list_div.appendChild(ul_node);
 
-  // list_div.appendChild(complete_btn);
-  // list_div.appendChild(delete_btn);
   document.body.appendChild(list_div);
 
   var first_click = true;
 
   complete_btn.onclick = function () {
     if (first_click) {
-      // this.parentElement.parentElement.style.textDecoration = "line-through";
-      // this.parentElement.parentElement.style.opacity = 25%
       this.parentElement.parentElement.setAttribute("class", "completed");
       first_click = false;
     } else {
